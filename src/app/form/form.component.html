@@ -1,0 +1,68 @@
+<button class="btn btn-primary" (click)="started = true" *ngIf="!started">
+  Démarrer le questionnaire
+</button>
+
+<form #form novalidate *ngIf="started">
+  <!-- {{ questions | json }} -->
+  <div *ngFor="let question of questions; let i = index">
+    <br>
+    <span class="h5">
+      {{ question.question }}
+    </span>
+    <br>
+    <br>
+
+    <div *ngFor="let response of question.responses; let j = index">
+      <input type="radio" [name]="i" [id]="i + '-' + j" required (change)="reverseChecked(question, response)">
+      <label [for]="i + '-' + j">{{ response.response }}</label>
+    </div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="calculate()">J'ai fini</button>
+
+
+  <div *ngIf="calculated">
+
+    <br>
+  <div>
+      Résultat :
+      <span *ngIf="contains('therapy')" class="pr-2 font-weight-bold">
+        Thérapeute familial</span>
+      <span *ngIf="contains('counsel')" class="pr-2  font-weight-bold">
+        Conseiller familial</span>
+      <span *ngIf="contains('mediation')" class="pr-2  font-weight-bold">
+        Mediateur familial
+      </span>
+    </div>
+
+    <br>
+
+    <p class="font-italic">
+      Les résultats obtenues sont là pour t'aider à t'orienter sur la situation du conflit que tu vies actuellement. Ces résultats
+      ne sont en aucun cas une absolue vérité, mais plutôt une hypothèse. Il te faut contacter directement un des personnels
+      qui te dirigera si besoins vers le personnel adéquat à ta situation de conflit avec tes parents.
+    </p>
+    <p class="font-italic">
+      Tu as tout a fait le droit de faire appel à l'un de ces trois professionnel mais tu ne dois pas oublier d'en parler à tes
+      parents. Car quoi qu'il arrive le conflit concerne vous trois et c'est à tes parents de prendre la décision finale de
+      consulter une de ces trois options ou non. Tu peux tout de même faire appel de ton côté à un professionnel qui pourra
+      te renseigner et/ou contacter tes parents pour un éventuel rendez-vous.
+    </p>
+
+    <p>
+      Voici un carnet d'adresses où tu pourras trouver des médiateurs familiale, des thérapeutes familial et des conseillers familial.
+      <br/>N'hésite pas à les appeler ou à envoyer un mail.
+    </p>
+
+    <ul>
+      <li *ngIf="contains('therapy')">
+        <a href="http://www.sftf.net/les-membres/">Contacter un Thérapeute familial</a></li>
+      <li *ngIf="contains('counsel')">
+        <a href="https://www.anccef.fr/trouver-un-conseiller">Contacter un Conseiller familial</a></li>
+      <li *ngIf="contains('mediation')">
+        <a href="http://www.mediation-familiale.org/annuaire-services-de-m%C3%A9diation-familiale#!">Contacter un Mediateur familial
+        </a>
+      </li>
+    </ul>
+  </div>
+</form>

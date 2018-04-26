@@ -1,20 +1,152 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+      </svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="#introduction">Introduction</a>
+    <a class="py-2 d-none d-md-inline-block" href="#tiers">Vers qui ce tourner ?</a>
+    <a class="py-2 d-none d-md-inline-block" href="#comment-choisir">Comment choisir ?</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">A propos</a>
+  </div>
+</nav>
 
+<div class="position-relative overflow-hidden text-center bg-light background-img">
+  <div class="col-md-5 p-lg-5 mx-auto my-5 ">
+    <h1 class="display-4 font-weight-normal">Mes parents me prennent la tête</h1>
+    <h2 class="lead font-weight-normal">Que faire face à un conflit avec mes parents ?</h2>
+  </div>
+</div>
+<br>
+<div id="introduction"></div>
+<br>
+<br>
+<div class=" w-100 mt-4 p-3">
+  <h3>Introduction</h3>
+  <div class="p-4">
+
+    <p> Il n'est pas rare que des disputes ou des désaccords éclatent entre toi et tes parents. Parfois, tu peux aussi te retrouver
+      dans un milieu conflictuel qui ne te concerne pas directement, comme un divorce difficile entre tes parents. Les conflits
+      sont en effet inévitables, mais l’important est de communiquer tes attentes et tes opinions de façon à te respecter
+      toi-même et à respecter tes parents. </p>
+    <p>
+
+      Mais si ces crises deviennent de plus en plus régulières et intenses alors la communication entre toi et tes parents peut
+      devenir difficile, voir parfois inexistante. Tu risques de te retrouver alors coincé dans une situation qui peut être
+      difficile d'en sortir. Souvent, pourtant, tu as envie que ça change, mais quand la communication est impossible alors
+      la situation de conflit stagne ou s’aggrave encore plus. Tu ne sais alors plus quoi faire.
+    </p>
+    <p>
+      Pourtant des solutions existent ! Si tu penses avoir tout essayer en vain, alors ceci devrait te redonner espoir. Car si
+      toi ou tes parents n’arrivez pas à gérer ou résoudre un conflit, un professionnel pourra vous aider à y parvenir. Ce
+      tiers partial pourra être une écoute et un soutient, il pourra aussi aider à résoudre le conflit ou bien encore aider
+      à gérer un conflit.
+    </p>
+
+  </div>
+</div>
+<div id="tiers"></div>
+<br><br>
+<div class=" w-100 p-3 " >
+  <h3>Vers qui ce tourner ?</h3>
+  <div class="p-4">
+    <ngb-tabset>
+      <ngb-tab title="Médiateur familial">
+        <ng-template ngbTabContent>
+          <br>
+          <p>
+            Le médiateur familial intervient dans le but de favoriser la communication et la gestion d'un conflit au sein de la famille.
+          </p>
+          <ul>
+            <li>
+              <span class="font-weight-bold">Quand ?</span> Le médiateur intervient lorsque tes parents se séparent ou rompt et que tu souffres parce qu'ils
+              n'arrivent pas à gérer correctement la situation.</li>
+            <li>
+              <span class="font-weight-bold">Comment ?</span> Le médiateur va faire prendre conscience à tes parents de la responsabilité qu'ils ont dans
+              ce conflit et de leur devoir de le gérer correctement.</li>
+            <li>
+              <span class="font-weight-bold">Pourquoi ?</span> Le médiateur est là pour reconstruire un lien familial qui te semble tendu voir complètement
+              coupé et qui te fais souffrir.</li>
+          </ul>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Thérapeute familial">
+        <ng-template ngbTabContent>
+          <br>
+          <p>
+            Le thérapeute familial intervient dans le but de résoudre un conflit interne au sein de la famille.</p>
+
+          <ul>
+            <li>
+              <span class="font-weight-bold">Quand ?</span> le thérapeute intervient quand tu sens que la communication ne passe pas, ou passe difficilement,
+              avec tes deux ou l'un de tes parents et que le conflit est intense et dure depuis longtemps.
+            </li>
+            <li>
+              <span class="font-weight-bold">Comment ?</span> le thérapeute va effectuer une analyse approfondie sur la situation et sur ta famille.
+            </li>
+            <li>
+              <span class="font-weight-bold">Pourquoi ?</span> Le thérapeute est là pour que chaque membre de ta famille, y compris toi, se réapproprie
+              une place qui lui est dû.
+            </li>
+          </ul>
+
+
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Conseiller familial">
+        <ng-template ngbTabContent>
+          <br>
+          <p>
+            Le conseiller familial intervient dans le but d'apporter un soutient et une écoute en gérant le dialogue.
+          </p>
+          <ul>
+            <li>
+
+              <span class="font-weight-bold">Quand ?</span> le conseiller intervient lorsqu'un conflit ou qu'un problème de communication n'arrive pas à
+              être surmonté, ou lorsqu'une quelconque difficulté amenant doute et incompréhension survient.
+            </li>
+            <li>
+
+              <span class="font-weight-bold">Comment ?</span> le conseiller va faire prendre conscience à toi et tes parents les enjeux de ce qui vous lie
+              et de ce qui vous rend difficile la vie ensemble.
+            </li>
+            <li>
+              <span class="font-weight-bold">Pourquoi ?</span> Le conseiller est là pour rétablir le dialogue et/ou créer du sens à une incompréhension
+              ou un conflit.
+
+            </li>
+          </ul>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+</div>
+
+<div id="comment-choisir"></div>
+<br><br>
+<div class=" w-100 p-3 " >
+  <h3>Comment choisir ?</h3>
+  <p class="p-4">
+    Si tu n'es pas sûr de qui, toi et tes parents, ayez réellement besoins entre ces trois professionnels alors voici un petit
+    questionnaire qui pourra te guider sur le choix du professionnel à contacter.
+  </p>
+  <div class="pl-4">
+    <app-form></app-form>
+  </div>
+</div>
+<div class=" w-100 p-3 ">
+  <h3>A propos</h3>
+  <p class="p-4">
+      Ce site a été réalisé par Léonore Bolliet et Rémi Bouguermouh dans le cadre d'étude universitaire. Ce support à été créé pour répondre à la problématique suivante : « Comment l'adolescent peut-il être informé des moyens pour gérer ou réparer le conflit parent/adolescent ? ».
+      <br>
+      Les conseils donnés sur ce site ne remplacent pas ceux d'un professionnel.
+  </p>
+</div>
